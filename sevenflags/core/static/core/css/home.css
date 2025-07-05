@@ -1,0 +1,778 @@
+/* Hero Section */
+.hero-details {
+    width: 100%;
+    padding: 20px 20px;
+    min-height: 400px;
+    text-align: center;
+    font-family: "Inter", Helvetica, sans-serif;
+    background: none;
+    box-sizing: border-box;
+}
+
+.hero-tagline {
+    font-size: 48px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.hero-description .highlight {
+    color: gold;
+    font-weight: 600;
+}
+
+/* Our Services Section */
+.services-section {
+    background-color: #000;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 60px 40px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+/* Grid layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual card */
+.service-card {
+    background-color: #111;
+    border-radius: 16px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 40px;
+    padding: 20px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Text content */
+.service-content h3 {
+    font-size: 20px;
+    color: #FFD700; 
+    margin-bottom: 20px;
+}
+
+.service-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Featured Listings Section */
+.featured-listings {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    font-family: "Inter", sans-serif;
+}
+
+.featured-listings h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.swiper {
+    padding-bottom: 40px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.property-card {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    height: 400px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    color: #fff;
+}
+
+.price-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: #b8860b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.property-meta {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(0,0,0,0.4);
+    padding: 8px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.house-name {
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    left: 16px;
+    bottom: 60px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.property-features {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 10px ;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.property-features i {
+    margin-right: 6px;
+}
+
+.view-all-button {
+    margin-top: 40px;
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid #b8860b;
+    color: #b8860b;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-all-button:hover {
+    background-color: #b8860b;
+    color: #fff;
+}
+/* Vision-Mission */
+.vision-mission {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    padding: 60px 40px;
+    background-color: black;
+    font-family: "Inter", sans-serif;
+    align-items: center;
+}
+  
+.vision,
+.mission {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.vision h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #b8860b;
+    margin-bottom: 16px;
+}
+.mission h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #b8860b;
+    margin-bottom: 16px;
+    margin-top: 32px;
+}
+
+.vision p,
+.mission p {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.vision-image,
+.mission-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Experience Section */
+.real-estate-experience {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-family: "Inter", Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.section-header p {
+    font-family: "Inter", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #b8860b;
+    line-height: 28px;
+    max-width: 610px;
+    margin: 0 auto 40px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.card {
+    background-color: #fffaf0;
+    border: 1px solid rgba(184, 134, 11, 0.1);
+    border-radius: 16px;
+    width: 400px;
+    height: 390px;
+    padding: 27px;
+    text-align: left;
+    position: relative;
+}
+
+.card-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
+}
+
+.card-content h3 {
+    font-family: "Inter", Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 20px;
+    margin-top: 38px;
+}
+
+.card-content p {
+    font-family: "Inter", Helvetica, sans-serif;
+    font-size: 18px;
+    color: #758187;
+    line-height: 32px;
+    text-align: left;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    margin-top: 43px;
+    font-family: "Inter", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #b8860b;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.learn-more-btn .line {
+    font-weight: 600;
+    color: #b8860b;
+    margin-left: 8px;
+    letter-spacing: -0.5px;
+}
+
+.mortgage-calculator {
+    background-color: #fff8e1;
+    padding: 60px 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.calculator-content {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.calculator-content h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #b8860b;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.calculate-button {
+    display: block;
+    width: 100%;
+    background-color: #b8860b;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.calculate-button:hover {
+    background-color: #a37509;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+}
+
+/* Testimonial Section */
+.testimonials-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.testimonials-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.testimonials-section .subtitle {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.testimonial-container-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.testimonial-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.testimonial-container::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial-card {
+    min-width: 300px;
+    max-width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+    text-align: left;
+}
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card.staggered {
+    margin-top: 40px;
+}
+
+.testimonial-card .quote-icon {
+    font-size: 50px;
+    color: #b8860b;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0;
+    flex: 1;
+}
+
+.testimonial-card h4 {
+    font-weight: 600;
+    color: #333;
+}
+
+.testimonial-controls {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.arrow-btn {
+    background-color: #b8860b;
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 40px;
+    transition: background 0.3s ease;
+}
+
+.arrow-btn:hover {
+    background-color: #a37509;
+}
+
+
+/* Amenities Section */
+.amenities-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px 60px 20px; 
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.amenities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.amenities-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.amenities-header h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.amenities-header p {
+    font-size: 16px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 32px; 
+    justify-content: center;
+}
+
+.amenity-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.amenity-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transform: translateY(-5px);
+}
+
+.amenity-card .icon {
+    font-size: 36px;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.amenity-card span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+}
+
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+  
+    .amenities-grid {
+      grid-template-columns: repeat(3, 1fr);
+    } 
+
+    .card {
+    width: 45%; /* Two cards per row on medium screens */
+  }
+    
+  }
+  
+  @media (max-width: 900px) {
+  .card-container {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    height: auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+    
+  
+    .hero-tagline {
+      font-size: 32px;
+    }
+  
+    .carousel-container {
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .scroll-btn {
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+    }
+  
+    .thumbnails img {
+      width: 120px;
+      height: 80px;
+    }
+  
+    .thumbnails img.active {
+      width: 180px;
+      height: 120px;
+    }
+  
+    .property-card {
+      width: 90%;
+    }
+    .vision-mission {
+      flex-direction: column;
+    }
+  
+    .vision,
+    .mission {
+      flex: 1 1 100%;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .vision h2,
+    .mission h2 {
+      font-size: 28px;
+    }
+  
+    .amenities-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    } 
+
+  
+    .hero-description {
+      text-align: center;
+      font-size: 16px;
+      padding: 0 10px;
+    }
+  
+    .house-grid {
+      grid-template-columns: 1fr;
+    }
+  
+      .properties-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .property-card {
+      width: 100%;
+    }
+  
+     .section-header h2 {
+    font-size: 32px;
+  }
+
+  .section-header p {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 0 10px;
+  }
+
+  .card {
+    width: 100%; /* Full width cards on small screens */
+    height: auto;
+    padding: 20px;
+  }
+
+  .card-content h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+
+  .card-content p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .learn-more-btn {
+    margin-top: 30px;
+    font-size: 15px;
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo-image {
+    max-height: 28px;
+    height: 28px;
+  }
+  }
+  
+  @media (max-width: 600px) {
+  .card-container {
+    gap: 10px;
+  }
+  .card {
+    max-width: 98vw;
+    padding: 12px;
+  }
+  .card-content h3 {
+    font-size: 20px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
+  .card-content p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .card-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 10px;
+  }
+  .learn-more-btn {
+    margin-top: 18px;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+  
+  @media (max-width: 480px) {
+    .carousel-container {
+      bottom: 20px;
+      flex-direction: row;
+      padding: 0 5px;
+    }
+  
+    .scroll-btn {
+      width: 36px;
+      height: 36px;
+      font-size: 18px;
+    }
+  
+    .amenities-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+  
+    .amenity-card {
+      padding: 10px 2px;
+    }
+    .amenity-card .icon {
+      font-size: 16px;
+    }
+    .amenity-card span {
+      font-size: 10px;
+    }
+  
+      
+  }
