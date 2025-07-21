@@ -197,6 +197,7 @@ CKEDITOR_5_CONFIGS = {
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email 
+<<<<<<< HEAD
 # Example using Gmail SMTP
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -208,6 +209,14 @@ EMAIL_HOST_PASSWORD = 'aeyz umxl rtac quhc'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 CONTACT_EMAIL = 'amungai37@gmail.com'  # where contact emails should go
 
+=======
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config('EMAIL_HOST')  
+EMAIL_PORT = config('EMAIL_PORT', default=587, cast=int)
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+>>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
 
 # Email settings
 DEFAULT_REPLY_TO_EMAIL = 'contact@sevenflags.com'

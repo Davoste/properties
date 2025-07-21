@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse
 from django.db.models import Count
@@ -14,6 +15,20 @@ from django.conf import settings
 def home(request):
     properties = Property.objects.filter(is_featured=True)  
     return render(request, 'core/home.html',{'properties': properties})
+=======
+from django.shortcuts import render, redirect
+from django.http import JsonResponse
+from django.db.models import Count
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from .models import City, Property, BlogPost, PropertyType, PropertyImage, PropertyVideo, Country, ExchangeRate
+from django.contrib.admin.views.decorators import staff_member_required
+from .tasks import update_currency_rates
+from .utils import convert_from_kes, convert_to_kes
+
+# Create your views here.
+def home(request):
+    return render(request, 'core/home.html')
+>>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
 
 
 
@@ -29,19 +44,30 @@ def update_exchange_rates_view(request):
     update_currency_rates.delay()  # Run as a background task (celery + redis + beat scheduler)
     return JsonResponse({"message": "Exchange rate update triggered."})
 
+<<<<<<< HEAD
 def blog(request):
     blogs = BlogPost.objects.all().order_by('published_at')  # Adjust ordering as needed
     return render(request, 'core/blogs.html', {'blogs': blogs})
+=======
+>>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
 
 def about(request):
     return render(request, 'core/about.html')
 
+<<<<<<< HEAD
 # def blog(request):
 #     return render(request, 'core/blogs.html')
 
 def blog_details(request, slug):
     blog = get_object_or_404(BlogPost, slug=slug)
     return render(request, 'core/blog_detail.html', {'blog': blog})
+=======
+def blog(request):
+    return render(request, 'core/blogs.html')
+
+def blog_details(request, pk):
+    return render(request, 'core/blog_detail.html')
+>>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
 
 def contact(request):
     return render(request, 'core/contact.html')
@@ -190,8 +216,13 @@ def get_property_types(request):
 
 def properties(request):
     if request.method == 'GET':
+<<<<<<< HEAD
         # Get all published properties
         properties_qs = Property.objects.filter(is_published=True).select_related('city', 'city__country', 'property_type', 'featured_image')
+=======
+        # Get Properties page
+        properties = Property.objects.filter(is_published=True)
+>>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
         property_types = PropertyType.objects.all()
         countries = Country.objects.all()
         cities = City.objects.all()
@@ -208,6 +239,7 @@ def properties(request):
         city = request.GET.get('city')
 
         if purpose:
+<<<<<<< HEAD
             properties_qs = properties_qs.filter(purpose=purpose)
         if prop_type:
             properties_qs = properties_qs.filter(property_type_id=prop_type)
@@ -228,6 +260,27 @@ def properties(request):
 
         # Paginate properties
         paginator = Paginator(properties_qs, 8)
+=======
+            properties = properties.filter(purpose=purpose)
+        if prop_type:
+            properties = properties.filter(property_type_id=prop_type)
+        if price_min:
+            properties = properties.filter(price__gte=price_min)
+        if price_max:
+            properties = properties.filter(price__lte=price_max)
+        if bedrooms:
+            properties = properties.filter(bedrooms=bedrooms)
+        if bathrooms:
+            properties = properties.filter(bathrooms=bathrooms)
+        if sqft:
+            properties = properties.filter(sqft__gte=sqft)
+        if city:
+            properties = properties.filter(city_id=city)
+        elif country:
+            properties = properties.filter(city__country_id=country)
+
+        paginator = Paginator(properties, 8)
+>>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
         page = request.GET.get('page')
         properties_page = paginator.get_page(page)
 
@@ -237,6 +290,7 @@ def properties(request):
             'cities': cities,
             'properties': properties_page,
         }
+<<<<<<< HEAD
 
         return render(request, 'core/properties.html', context)
 
@@ -298,3 +352,18 @@ def subscribe_newsletter(request):
         else:
             messages.error(request, "Please enter a valid email address.")
     return redirect(request.META.get('HTTP_REFERER', '/'))
+=======
+        # return render(request, 'partials/property_filter_form.html', context)
+
+        return render(request, 'core/properties.html')
+
+    else:
+        # Post request from the properties search form
+        pass
+
+def get_property_details(request, id):
+    pass
+
+
+
+>>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0

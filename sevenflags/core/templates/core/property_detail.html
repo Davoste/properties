@@ -1,12 +1,17 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+=======
+
+>>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+<<<<<<< HEAD
   <title>{{ property.title }} | SevenFlags Real Estate</title>
 </head>
 
@@ -49,11 +54,52 @@
           </div>
           <div class="breadcrumb-title-wrap">
             <h1 class="breadcrumb-title">{{ property.title }}</h1>
+=======
+  <title>SevenFlags Real Estate</title>
+</head>
+
+<body> 
+    <!-- Header Section -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="website-logo">
+        <img class="logo-monogram" src="{% static 'icons/Rent Home Section.svg' %}" alt="Seven Flags" />
+        <div class="brand-name">SevenFlags</div>
+      </div>
+
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      
+      <nav class="navbar" id="navbar">
+        <a href="{% url 'core:home' %}">Home</a>
+        <a href="{% url 'core:properties' %}">Properties</a>
+        <a href="{% url 'core:invest' %}">Invest</a>
+        <a href="{% url 'core:blog' %}">Blog</a>
+        <a href="{% url 'core:about' %}">Overview</a>
+        <a href="{% url 'core:contact' %}">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+    <main>
+        <section class="breadcrumb-section">
+      <div class="breadcrumb-container">
+        <div class="breadcrumb-wrapper">
+          <div class="breadcrumb-links">
+            <a href="index.html" class="breadcrumb-link">Home</a>
+            <span class="breadcrumb-divider">/</span>
+            <a href="rent.html" class="breadcrumb-link">Propeties</a>
+            <span class="breadcrumb-divider">/</span>
+            <span class="breadcrumb-current">Property Details</span>
+          </div>
+          <div class="breadcrumb-title-wrap">
+            <h1 class="breadcrumb-title">Properties</h1>
+>>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
           </div>
         </div>
       </div>
     </section>
 
+<<<<<<< HEAD
     <!-- Carousel Section -->
     <section class="carousel-section">
       {% if property.images.all %}
@@ -200,3 +246,226 @@
   </script>
 </body>
 </html>
+=======
+        <section class="carousel-section">
+            <img src="images/dillon-kydd-3Ignkeds3w8-unsplash.jpg" alt="Background" class="background-image" />
+            
+            <div class="carousel-container">
+                <button class="scroll-btn left" onclick="scrollThumbnails(-1)">&#8592;</button>
+                <div class="thumbnails" id="thumbnails">
+                <img src="images/brian-babb-XbwHrt87mQ0-unsplash.jpg" alt="Photo 1" />
+                <img src="images/john-fornander-Id7u0EkTjBE-unsplash.jpg" alt="Photo 2" />
+                <img src="images/zac-cain-4ETshgrhbJw-unsplash.jpg" alt="Photo 3" />
+                <img src="images/4 Property Section Images/pexels-binyaminmellish-186077.jpg" alt="Photo 4" />
+                <img src="images/4 Property Section Images/pexels-expect-best-79873-323780.jpg" alt="Photo 5" />
+                <img src="images/4 Property Section Images/pexels-pixabay-221024.jpg" alt="Photo 6" />
+                </div>
+                <button class="scroll-btn right" onclick="scrollThumbnails(1)">&#8594;</button>
+            </div>
+        </section>
+
+        <section class="property-description-section">
+            <div class="property-container">
+
+                <!-- Description -->
+                <div class="description-box">
+                <h2>Description</h2>
+                <p>
+                    Beautiful, updated, ground-level co-op apartment in the desirable Bay Terrace neighborhood. 
+                    This home features hardwood floors throughout, brand new bathrooms, a newer EIK, a modern 
+                    front-load washer/dryer, a full dining room, a large living area, 3 spacious bedrooms, and 
+                    plenty of storage. The master bedroom includes both a standard closet and a custom closet 
+                    wall unit. Large windows face many directions for tons of natural light.
+                </p>
+                <p>
+                    Just steps away from the QM2 express bus to Manhattan and local buses; only minutes from 
+                    the LIRR. Walking distance to the Bay Terrace Shopping Center, Baybridge Commons Shopping 
+                    Center, pool clubs, movie theaters, and tennis courts. 1.5 blocks away from elementary 
+                    school PS 169 and Bell Academy middle school in the award-winning District 25. Don’t miss 
+                    this opportunity!
+                </p>
+                </div>
+
+                <hr />
+
+                <!-- Address -->
+                <div class="address-box">
+                <h2>Address</h2>
+                <ul class="address-details">
+                    <li><strong>Name</strong>: Safari Oasis</li>
+                    <li><strong>City</strong>: Nairobi</li>
+                    <li><strong>Area</strong>: Westlands</li>
+                    <li><strong>Country</strong>: Kenya</li>
+                    <li><strong>Address</strong>: Dedan Kimathi Rd, Woodley</li>
+                </ul>
+                </div>
+
+                <hr />
+
+                <!-- Details -->
+                <div class="details-box">
+                <h2>Details</h2>
+                <ul class="details">
+                    <li><strong>Price</strong>: KES 18,000,000</li>
+                    <li><strong>Size</strong>: 2,300 sqft</li>
+                    <li><strong>Bedrooms</strong>: 3</li>
+                    <li><strong>Bathrooms</strong>: 2</li>
+                    <li><strong>Balcony</strong>: Yes</li>
+                    <li><strong>Room Floor</strong>: 4th Floor</li>
+                </ul>
+                </div>
+
+                <hr />
+
+                <!-- Amenities -->
+                <div class="amenities-box">
+                <h2>Amenities</h2>
+                <ul class="amenities-details">
+                    <li>Lift</li>
+                    <li>Security Guard</li>
+                    <li>WiFi</li>
+                    <li>Swimming Pool</li>
+                    <li>Play Ground</li>
+                    <li>Parking</li>
+                    <li>Power Backup</li>
+                    <li>Gym</li>
+                </ul>
+                </div>
+
+            </div>
+
+            <div class="video-box">
+                <h2>Property Tour</h2>
+                <div class="video-wrapper">
+                    <iframe 
+                    src="https://www.youtube.com/embed/VIDEO_ID" 
+                    title="Property Video Tour" 
+                    frameborder="0" 
+                    allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="custom-footer">
+        <div class="footer-content">
+        <div class="footer-section about">
+            <div class="footer-logo">
+            <i class="fa-solid fa-house-chimney"></i>
+            <span>SevenFlags</span>
+            </div>
+            <p>Embark on a journey of discovery with Seven Flags’ commitment to excellence.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h4>Useful Links</h4>
+            <ul>
+            <li><a href="#">Listing</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h4>Get in Touch</h4>
+            <ul>
+            <li><i class="fas fa-phone-alt"></i> +91 600 500 600</li>
+            <li><i class="fas fa-envelope"></i> hello@sevenflags.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> 1234, Nairobi, Kenya</li>
+            </ul>
+        </div>
+
+        <div class="footer-section newsletter">
+            <h4>Newsletter</h4>
+            <form>
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit">Submit</button>
+            </form>
+        </div>
+        </div>
+
+        <div class="footer-bottom">
+        <div class="social-icons">
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <p>&copy; 2025 Seven Flags. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        const thumbnails = document.getElementById("thumbnails");
+        const images = thumbnails.getElementsByTagName("img");
+        const bgImage = document.querySelector(".background-image");
+
+        let currentCenterIndex = 1;
+
+        function updateCarousel() {
+        for (let i = 0; i < images.length; i++) {
+            images[i].classList.remove("active");
+            images[i].style.display = "none";
+        }
+
+        let indices = [
+            (currentCenterIndex - 1 + images.length) % images.length,
+            currentCenterIndex,
+            (currentCenterIndex + 1) % images.length
+        ];
+
+        indices.forEach((i, idx) => {
+            images[i].style.display = "block";
+            if (idx === 1) {
+            images[i].classList.add("active");
+            bgImage.src = images[i].src; // Update background to active
+            }
+        });
+        }
+
+        function scrollThumbnails(direction) {
+        currentCenterIndex += direction;
+        if (currentCenterIndex < 0) currentCenterIndex = images.length - 1;
+        if (currentCenterIndex >= images.length) currentCenterIndex = 0;
+        updateCarousel();
+        }
+
+        // Click to set image as background
+        for (let i = 0; i < images.length; i++) {
+        images[i].addEventListener("click", () => {
+            currentCenterIndex = i;
+            updateCarousel();
+        });
+        }
+
+        updateCarousel();
+
+             // Get current page filename 
+const currentPage = window.location.pathname.split("/").pop();
+
+// Get all navbar links
+const navLinks = document.querySelectorAll(".navbar a");
+
+navLinks.forEach(link => {
+    // Get href from each link
+    const linkPage = link.getAttribute("href");
+
+    // Match filename and apply "active" class
+    if (linkPage === currentPage) {
+    link.classList.add("active");
+    }
+});
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("active");
+    }
+    </script>
+
+</body>
+
+</html>
+
+>>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0

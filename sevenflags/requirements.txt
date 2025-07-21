@@ -3,7 +3,10 @@ Django==5.2.4
 python-decouple==3.8
 sqlparse==0.5.3
 tzdata==2025.2
+<<<<<<< HEAD
 django-ckeditor-5
 django-celery-beat
 django-cors-headers
 requests
+=======
+>>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
