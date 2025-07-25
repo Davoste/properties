@@ -71,10 +71,7 @@ class Property(models.Model):
         related_name='featured_for_property'
     )
     title = models.CharField(max_length=255)
-<<<<<<< HEAD
     is_featured = models.BooleanField(default=False)
-=======
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
     description = models.TextField()
     purpose = models.CharField(max_length=4, choices=PROPERTY_CATEGORY)
     property_type = models.ForeignKey(PropertyType, on_delete=models.SET_NULL, null=True, blank=True)
@@ -230,11 +227,7 @@ class NewsletterSubscriber(models.Model):
     subscription_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-<<<<<<< HEAD
         return self.email
-=======
-        return {self.email}
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
 
 
 class Newsletter(models.Model):

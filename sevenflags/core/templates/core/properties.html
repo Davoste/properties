@@ -4,7 +4,6 @@
 
 {% block title %} Properties {% endblock %}
 
-<<<<<<< HEAD
 {% block additional_css %} <link rel="stylesheet" href="{% static 'core/css/home.css' %}">{% endblock %}
 
 
@@ -44,26 +43,6 @@
   </div>
 </section>
 
-=======
-{% block additional_css %} <link rel="stylesheet" href="{% static 'core/css/properties.css' %}">{% endblock %}
-
-{% block content %}
-
-  <section class="breadcrumb-section">
-    <div class="breadcrumb-container">
-      <div class="breadcrumb-wrapper">
-        <div class="breadcrumb-links">
-          <a href="{% url 'core:home' %}" class="breadcrumb-link">Home</a>
-          <span class="breadcrumb-divider">/</span>
-          <span class="breadcrumb-current">Properties</span>
-        </div>
-        <div class="breadcrumb-title-wrap">
-          <h1 class="breadcrumb-title">Our Properties</h1>
-        </div>
-      </div>
-    </div>
-  </section>
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
   {% include "partials/property_filter_form.html" %}
 
 {% endblock %}

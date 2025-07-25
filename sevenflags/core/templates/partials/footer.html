@@ -34,7 +34,6 @@
 
       <div class="footer-section newsletter">
         <h4>Newsletter</h4>
-<<<<<<< HEAD
         {% if messages %}
           <div class="messages">
             {% for message in messages %}
@@ -45,10 +44,6 @@
         <form method="POST" action="{% url 'core:subscribe_newsletter' %}">
           {% csrf_token %}
           <input type="email" name="email" placeholder="Your Email" required />
-=======
-        <form>
-          <input type="email" placeholder="Your Email" required />
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
           <button type="submit">Submit</button>
         </form>
       </div>

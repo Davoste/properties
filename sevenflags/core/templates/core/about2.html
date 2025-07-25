@@ -126,11 +126,7 @@
       <div class="footer-section contact">
         <h4>Get in Touch</h4>
         <ul>
-<<<<<<< HEAD
           <li><i class="fas fa-phone-alt"></i> +91 600 500 611</li>
-=======
-          <li><i class="fas fa-phone-alt"></i> +91 600 500 600</li>
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
           <li><i class="fas fa-envelope"></i> hello@sevenflags.com</li>
           <li><i class="fas fa-map-marker-alt"></i> 1234, Nairobi, Kenya</li>
         </ul>
@@ -138,7 +134,6 @@
 
       <div class="footer-section newsletter">
         <h4>Newsletter</h4>
-<<<<<<< HEAD
         {% if messages %}
           <div class="messages">
             {% for message in messages %}
@@ -148,9 +143,6 @@
         {% endif %}
         <form method="POST" action="{% url 'core:subscribe_newsletter' %}">
           {% csrf_token %}
-=======
-        <form>
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
           <input type="email" placeholder="Your Email" required />
           <button type="submit">Submit</button>
         </form>

@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.contrib import admin
-<<<<<<< HEAD
 from django.conf import settings
 from django.contrib import messages
 from django.utils.html import format_html, mark_safe
@@ -12,14 +11,6 @@ from django.shortcuts import redirect
 from django.contrib.auth.models import User, Group
 from django.contrib.auth.admin import UserAdmin, GroupAdmin
 from django.core.mail import send_mail
-=======
-from django.utils.html import format_html, mark_safe
-from django.urls import reverse
-from .models import Partner, Property, PropertyImage, PropertyVideo, ExchangeRate, Inquiry, BlogPost, Newsletter, NewsletterDelivery, NewsletterSubscriber, City, Country, PropertyType
-
-from django.contrib.auth.models import User, Group
-from django.contrib.auth.admin import UserAdmin, GroupAdmin
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
 
 from django_celery_beat.models import PeriodicTask, IntervalSchedule, CrontabSchedule, SolarSchedule, ClockedSchedule
 from django_celery_beat.admin import PeriodicTaskAdmin, IntervalScheduleAdmin, CrontabScheduleAdmin, SolarScheduleAdmin, ClockedScheduleAdmin
@@ -132,19 +123,11 @@ class PropertyTypeAdmin(admin.ModelAdmin):
 
 # Property Admin
 @admin.register(Property, site=admin_site)
-<<<<<<< HEAD
 class PropertyAdmin(admin.ModelAdmin):
     inlines = [PropertyImageInline, PropertyVideoInline]
     list_display = ('title', 'admin_thumbnail', 'purpose', 'property_type', 'price', 'get_country', 'city', 'is_published', 'created_short', 'is_featured', 'view_count')
     list_editable = ('is_published', 'is_featured')
     list_filter = ('is_featured','purpose', 'property_type' , 'city__country', 'city', 'is_published', 'is_featured', 'view_count')
-=======
-class PropertyAdmin(CustomAdmin):
-    inlines = [PropertyImageInline, PropertyVideoInline]
-    list_display = ('title', 'admin_thumbnail', 'purpose', 'property_type', 'price', 'get_country', 'city', 'is_published', 'created_short', 'is_featured', 'view_count')
-    list_editable = ('is_published', 'is_featured')
-    list_filter = ('purpose', 'property_type' , 'city__country', 'city', 'is_published', 'is_featured', 'view_count')
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
     list_per_page = 5
     list_max_show_all = 1000
     search_fields = ('title', 'address', 'city', 'city__country')
@@ -364,22 +347,14 @@ class CountryAdmin(CustomAdmin):
 
 
 @admin.register(City, site=admin_site)
-<<<<<<< HEAD
 class CityAdmin(admin.ModelAdmin):
     list_display = ('name', 'country_name', 'has_image', 'image_preview')
     search_fields = ('name', 'country__name')
     list_filter = ('country',)
-=======
-class CityAdmin(CustomAdmin):
-    list_display = ('name', 'country__name', 'has_image', 'image_preview')
-    search_fields = ('name', 'country__name')
-    list_filter = ('name', 'country__name')
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
     search_help_text = "Search by: city name | country e.g Kitengela"
 
     fieldsets = (
         (None, {
-<<<<<<< HEAD
             'fields': ('name', 'country')
         }),
         ('Image', {
@@ -392,24 +367,11 @@ class CityAdmin(CustomAdmin):
     country_name.admin_order_field = 'country'
     country_name.short_description = 'Country'
 
-=======
-            'fields': ('name', 'country__name')
-        }),
-        ('Image', {
-            'fields': ('image', 'has_image', 'alt_text')
-        }),
-    )
-
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
     def has_image(self, obj):
         return bool(obj.image)
     has_image.boolean = True
     has_image.short_description = 'Has Image'
 
-<<<<<<< HEAD
-=======
-
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
     def image_preview(self, obj):
         if obj.image:
             return mark_safe(f'<img src="{obj.image.url}" style="max-height: 80px;" />')
@@ -417,21 +379,12 @@ class CityAdmin(CustomAdmin):
     image_preview.short_description = "Preview"
 
 
-<<<<<<< HEAD
 # @admin.register(NewsletterSubscriber, site=admin_site)
 # class NewsletterSubscriberAdmin(admin.ModelAdmin):
 #     list_display = ('email', 'subscription_date')
 #     search_fields = ('email',)
 #     readonly_fields = ('subscription_date',)
 #     ordering = ('-subscription_date',)
-=======
-@admin.register(NewsletterSubscriber, site=admin_site)
-class NewsletterSubscriberAdmin(admin.ModelAdmin):
-    list_display = ('email', 'subscription_date')
-    search_fields = ('email',)
-    readonly_fields = ('subscription_date',)
-    ordering = ('-subscription_date',)
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
 
 
 @admin.register(NewsletterDelivery, site=admin_site)
@@ -446,7 +399,6 @@ class NewsletterDeliveryAdmin(admin.ModelAdmin):
     def has_add_permission(self, request):
         return False  # Hides the "+Add" button
 
-<<<<<<< HEAD
 # @admin.register(NewsletterSubscriber)
 # class NewsletterSubscriberAdmin(admin.ModelAdmin):
 #     list_display = ('email', 'subscription_date')
@@ -511,9 +463,6 @@ class NewsletterSubscriberAdmin(admin.ModelAdmin):
         }
         return render(request, 'admin/send_newsletter.html', context)
     
-=======
-
->>>>>>> abd6e6963a5a6f7286b33ee5e28834dc413f58f0
 @admin.register(Newsletter, site=admin_site)
 class NewsletterAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_at', 'get_subscribers_count')
